@@ -61,8 +61,11 @@ body {
   transform: scale(1) translateY(-0.2rem);
 }
 .form h2 {
-  display: non;
+  display: none;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.313);
+  padding: 10px;
   text-align: center;
-  font-size: 110px;
+  font-size: 90px;
   margin-top: 60px;
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */

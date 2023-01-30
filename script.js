@@ -20,6 +20,7 @@ function calculoImc(event){
     let imc = Number(kilos/(centimetros*centimetros)).toFixed(2);
 
     resultado.innerText = imc;
+    resultado.style.display='block';
 }
 
 btnCalcular.addEventListener('click', calculoImc)
