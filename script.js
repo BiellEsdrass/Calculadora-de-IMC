@@ -102,14 +102,39 @@ const label = document.getElementById('label')
 const label2 = document.getElementById('label2')
 const tema = document.getElementById('tema')
 
-btnBol.onclick = function(){
-    btnBol.style.left="59%";
-    btnFundo.style.backgroundColor="white";
-    backGround.style.backgroundColor="#1c1c1c"
-    label.style.color="white";
-    label2.style.color="white";
-    tema.style.color="white";
-}
+/*btnBol.onclick = function darkMode(){
+    if(btnBol.onclick){
+        btnBol.style.left="59%";
+        btnFundo.style.backgroundColor="white";
+        backGround.style.backgroundColor="#1c1c1c"
+        label.style.color="white";
+        label2.style.color="white";
+        tema.style.color="white";
+    }
+}*/
+
+    //btnBol
+    var originalStyles = {};
+
+    btnBol.addEventListener("click", function() {
+    var targetElement = document.querySelector(".section");
+    const btnBol = document.querySelector('.theme-bol');
+    if (Object.keys(originalStyles).length === 0) {
+        originalStyles = {
+        backgroundColor: targetElement.style.backgroundColor,
+        color: targetElement.style.color,
+        backgroundColor: btnBol.style.backgroundColor
+    };
+        targetElement.style.backgroundColor = "#1c1c1c";
+        targetElement.style.color = "white";
+        btnBol.style.backgroundColor = "#ec6626"
+    } else {
+        targetElement.style.backgroundColor = originalStyles.backgroundColor;
+        targetElement.style.color = originalStyles.color;
+        btnBol.style.backgroundColor = originalStyles.backgroundColor;
+        originalStyles = {};
+    }
+});
 
 
 

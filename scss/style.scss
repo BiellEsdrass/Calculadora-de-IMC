@@ -27,32 +27,31 @@ body{
         left: 11rem;
         top: 1rem;
 
-        h3{
+        .theme h3{
+
             font-size: 1rem;
-            text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 1px;
+            position: relative;
         }
 
     .theme-back{
 
         background-color: #1c1c1c;
-        height: 26px;
-        width: 55px;
-        border-radius: 15px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: relative;
     
         .theme-bol{
-            position: relative;
             transition: all .5s;
 
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            background-color: #ec6626;
+            width: 50px;
+            height: 30px;
+            border-radius: 25px;
+            background-color: #1c1c1c;
             cursor: pointer;
-
             .theme-bol:hover{
-                position: relative;
-                left: 58%;
+                background-color: #ec6626;
             }
         }
     
@@ -61,7 +60,6 @@ body{
 }
 
 .section{
-    height: 70%;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -72,6 +70,8 @@ body{
     width: 440px;
     height: 450px;
     padding: 30px;
+
+    transition: all .5s;
 
     h1{
         color: $color-primary;
@@ -119,10 +119,10 @@ body{
         border: none;
         margin-top: 20px;
 
-        width: 50%;
+        width: 60%;
         height: 40px;
 
-        font-size: 17px;
+        font-size: 18px;
         letter-spacing: 1px;
         font-weight: 600;
 
@@ -130,13 +130,13 @@ body{
     }
 
     input[type=submit]:hover{
-        transform: scale(0px) translateY(-.2rem);
-        background-color: #1c1c1c;
+        transform:  translateY(-.01rem);
     }
 
 }
 
 .box{
+    z-index: 99;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,15 +176,80 @@ body{
     }
 
     #btn-back{
-        padding: 10px;
+        padding: 1rem;
+        letter-spacing: 3px;
+        font-weight: 600;
         border: none;
         background-color: #1c1c1c;
         color: aliceblue;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
     }
 }
 
 
 
+@media (max-width:500px){
+    .section{
+        width: 360px;
+        height: 390px;
+        padding: 20px;
+    }
 
+    #tema{
+        position: relative;
+        right: 1rem;
+    }
+
+    .theme-back{
+        right: 1rem;
+    }
+}
+
+
+@media (max-width:384px){
+    .section{
+        width: 290px;
+        height: 360px;
+        padding: 5px;
+    }
+
+    #tema{
+        position: relative;
+        right: 3rem;
+        bottom: 15px;
+    }
+
+    .theme-back{
+        right: 3rem;
+        bottom: 1rem;
+    }
+
+    label{
+        font-size: 1.2rem;
+        padding: none;
+    }
+
+    input[type=number]{
+        padding: 3px;
+        height: 35px;
+        width: 110%;
+        font-size: 20px;
+        border-radius: 9px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    input[type=submit]{
+        margin-top: 20px;
+
+        width: 70%;
+        height: 40px;
+
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}
