@@ -5,6 +5,8 @@
 }
 
 body {
+  background-image: url(/imgs/fundo.jpg);
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -15,8 +17,14 @@ body {
 .section {
   height: 70%;
   background-color: aliceblue;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.313);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 9px rgba(0, 0, 0, 0.313);
   width: 500px;
+  height: 500px;
   padding: 30px;
 }
 .section h1 {
@@ -24,17 +32,22 @@ body {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
+  font-size: 2.4rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  justify-content: center;
   height: 80%;
   width: 60%;
 }
+.form label {
+  font-size: 1.2rem;
+  padding: none;
+}
 .form input[type=number] {
-  padding: 3px;
+  padding: 5px;
   height: 35px;
   font-size: 20px;
   outline: none;
@@ -58,14 +71,47 @@ body {
   transition: all 0.5s;
 }
 .form input[type=submit]:hover {
-  transform: scale(1) translateY(-0.2rem);
+  transform: scale(0px) translateY(-0.2rem);
 }
-.form h2 {
-  display: none;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.313);
-  padding: 10px;
-  text-align: center;
-  font-size: 90px;
-  margin-top: 60px;
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 370px;
+  width: 370px;
+  background-color: rgb(229, 229, 255);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.425);
+  padding: 20px;
   border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.box #top {
+  color: #1c1c1c;
+  text-transform: uppercase;
+}
+.box #resultado {
+  color: #1c1c1c;
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+.box #comment {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.585);
+}
+.box #btn-back {
+  padding: 10px;
+  border: none;
+  background-color: #1c1c1c;
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
