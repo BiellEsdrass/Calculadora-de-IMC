@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
+
     
     <div class="section">
         <h1>Calcular IMC</h1>
 
         <form action="" class="form">
             
-            <label for="altura">Insira sua altura(CM)</label>
+            <label id="label" for="altura">Insira sua altura(CM)</label>
             <input type="number" name="centimetros" id="altura" placeholder="183">
 
-            <label for="peso">Insira seu peso(KG)</label>
+            <label id="label2" for="peso">Insira seu peso(KG)</label>
             <input type="number" name="kilos" id="peso" placeholder="80">
 
             <input type="submit" value="CALCULAR" id="btn-calcular">
         </form>
+
+        <div class="theme">
+            <h3 id="tema">Tema</h3>
+            <div class="theme-back">
+                <div class="theme-bol"></div>
+            </div>
+        </div>
     </div>
 
     <div class="box">

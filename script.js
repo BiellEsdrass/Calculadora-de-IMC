@@ -33,60 +33,84 @@ function calculoImc(event){
 
 
             if (imc < 18.5){
-                comment.style.color='rgb(127, 195, 255)';
+                comment.style.color='#2883d2';
                 comment.textContent = "Abaixo do peso";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='rgb(127, 195, 255)';
+                box.style.backgroundColor="#c3e3ff";
+                resultado.style.color='#2883d2';
             } 
             
             else if(imc >= 18.6 && imc <= 24.9 ){
-                comment.style.color='#5cef9c';
+                comment.style.color='#28d269';
                 comment.textContent = "Peso ideal";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='#5cef9c';
+                box.style.backgroundColor="#c3ffde";
+                resultado.style.color='#28d269';
             }
         
             else if(imc >= 25 && imc <= 29.9){
-                comment.style.color='#fcff4b';
+                comment.style.color='#ccd228';
                 comment.textContent = "Sobrepeso";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='#fcff4b';
+                box.style.backgroundColor="#f6ffc3";
+                resultado.style.color='#ccd228';
             }
         
             else if(imc >= 30 && imc <= 34.9){
-                comment.style.color='#cd9b36';
+                comment.style.color='#d29c28';
                 comment.textContent = "Obesidade grau 1";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='#cd9b36';
+                box.style.backgroundColor="#ffefc3";
+                resultado.style.color='#d29c28';
             }
         
             else if(imc >= 35 && imc <= 39.9){
-                comment.style.color='#d0661b';
+                comment.style.color='#d27528';
                 comment.textContent = "Obesidade grau 2";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='#d0661b';
+                box.style.backgroundColor="#ffe1c3";
+                resultado.style.color='#d27528';
             }
         
             else if(imc >= 40){
-                comment.style.color='#d01b1b';
+                comment.style.color='#d22e28';
                 comment.textContent = "Obesidade grau 2";
                 console.log(comment)
         
                 box.style.display='flex';
-                resultado.style.color='#d01b1b';
+                box.style.backgroundColor="#ffcfc3";
+                resultado.style.color='#d22e28';
             }
-        }
-
-
+}
 btnCalcular.addEventListener('click', calculoImc)
+
+
+const btnFundo = document.querySelector('.theme-back');
+const btnBol = document.querySelector('.theme-bol');
+const backGround = document.querySelector('.section');
+const label = document.getElementById('label')
+const label2 = document.getElementById('label2')
+const tema = document.getElementById('tema')
+
+btnBol.onclick = function(){
+    btnBol.style.left="59%";
+    btnFundo.style.backgroundColor="white";
+    backGround.style.backgroundColor="#1c1c1c"
+    label.style.color="white";
+    label2.style.color="white";
+    tema.style.color="white";
+}
+
+
+
 
